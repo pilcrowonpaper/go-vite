@@ -2,6 +2,9 @@
   "name": "go-vite",
   "type": "module",
   "version": "1.0.0",
+  "scripts": {
+    "init": "mkdir vite/.html && mkdir vite/.assets"
+  },
   "devDependencies": {
     "@types/node": "^20.10.6",
     "rollup": "^4.9.1",

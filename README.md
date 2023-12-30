@@ -3,6 +3,10 @@
 Server rendered HTML using Go, optimized frontend with Vite.
 
 ```
+pnpm i
+
+pnpm run init
+
 pnpm vite dev
 ```
 
