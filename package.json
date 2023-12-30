@@ -3,7 +3,7 @@
   "type": "module",
   "version": "1.0.0",
   "scripts": {
-    "init": "mkdir vite/.html && mkdir vite/.assets"
+    "init": "mkdir -p vite/.html && touch vite/.html/_ && mkdir -p vite/.assets && touch vite/.assets/_"
   },
   "devDependencies": {
     "@types/node": "^20.10.6",

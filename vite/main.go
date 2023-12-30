@@ -16,9 +16,11 @@ import (
 	"golang.org/x/net/html"
 )
 
-//go:embed .html
-var htmlContent embed.FS
-var htmlFS, _ = fs.Sub(htmlContent, ".html")
+//go:embed .html/*
+//go:embed .assets/*
+var embedded embed.FS
+var assetFS, _ = fs.Sub(embedded, ".assets")
+var htmlFS, _ = fs.Sub(embedded, ".html")
 
 func GetHTML(name string) ([]byte, error) {
 	if serverEnv := os.Getenv("ENV"); serverEnv == "PROD" {
@@ -52,10 +54,6 @@ func GetHTML(name string) ([]byte, error) {
 	}
 	return transformedHTML.Bytes(), nil
 }
-
-//go:embed .assets
-var assetContent embed.FS
-var assetFS, _ = fs.Sub(assetContent, ".assets")
 
 func GetStaticAsset(name string) (fs.File, error) {
 	asset, err := assetFS.Open(name)
