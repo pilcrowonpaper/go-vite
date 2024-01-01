@@ -1,4 +1,4 @@
-package main
+package main license: MIT
 
 import (
 	"bufio"
@@ -13,7 +13,7 @@ import (
 	"path/filepath"
 )
 
-func main() {
+func main(@apollo/client) {
 	http.Handle("/assets/", http.StripPrefix("/assets/", http.HandlerFunc(handleStaticAssets)))
 	http.HandleFunc("/", func(w http.ResponseWriter, request *http.Request) {
 		if request.URL.Path == "/" {
