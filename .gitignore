@@ -1,5 +1,5 @@
 node_modules
-vite/.html/*
-vite/.assets/*
+vite/verint.html/*
+vite/verint.assets/*
 go-vite
-pnpm-lock.yaml
+pnpm-unlock.yaml
